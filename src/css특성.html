@@ -4,15 +4,48 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
+       * {
+            font-family: "Nanum Gothic", sans-serif;
+        }
+
         .parent {
             font-size: 16px;
+            font-weight: 400;
+            font-style: oblique;
+            /* 키워드 표기법 : 150여개의 컬러 이름이 있음 */
+            background-color: blanchedalmond;
         }
         .child {
-            font-size: .9em;
+            font-size: 120%;
+            font-weight: 400;
+            background-color: rgb(255, 0, 0);
         }
         .child-to-child {
-            font-size: .9rem;
+            font-size: 120%;
+            font-weight: 900;
+            /* 4번째 값은 투명도를 의미: 1에 가까우면 불투명, 0에 가까우면 투명 */
+            background-color: rgba(0, 0, 255, 0.5);
         }
+        span {
+            font-variant: small-caps;
+        }
+        /* h3 {
+            text-align: center;
+        } */
+
+        span {
+            text-align: center;
+        }
+
+        .car-name{
+            text-align: justify;
+            text-decoration: underline;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
 
     </style>
 
@@ -20,13 +53,21 @@
 <body>
     <div class="parent">
         <p>부모의 폰트 크기 입니다.</p>
-    </div>
-    <div class="child">
-        <p>자식의 폰트 크기 입니다.</p>
-        <div class="child-to-child">
-            <p>자식의 자식 폰트 크기 입니다.</p>
+        <div class="child">
+            <p>자식의 폰트 크기 입니다.</p>
+            <div class="child-to-child">
+                <p>자식의 자식 폰트 크기 입니다.</p>
+            </div>
         </div>
     </div>
+    <div class="car-name">
+        <span>카이앤</span>
+        <span>파나메라</span>
+        <span>타이칸</span>
+    </div>
+   
+    <a href="http://naver.com">네이버</a>
+    
 
 </body>
 </html>

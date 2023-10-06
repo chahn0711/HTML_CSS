@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        p {
-            display: flex;
-            border: 2px solid black;
-            padding: 10px;
+        div {
             width: 200px;
-            height: 200px;
-            box-sizing: border-box;
-            border-radius: 10%;
-            justify-content: center;
-            align-items: center;
+            height: 100px;
+            display: inline-block;
+            margin: 15px;
+            border: 1px solid orange;
+            border-radius: 20px;
 
         }
-
+        .box1{ box-shadow:2px -2px 5px 0px;}  /* 오른쪽 윗부분에 그림자 */
+		.box2{ box-shadow:5px 5px 15px 5px orange;}  /* 오른쪽 아랫부분에 파란색 그림자 */
     </style>
 </head>
 <body>
-    <p>padding</p>
-</body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    </body>
 </html>

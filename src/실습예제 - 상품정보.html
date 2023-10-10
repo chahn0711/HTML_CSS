@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 1000px;
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            /* 앞에 표시 없애기 none */
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            float: left;
+            padding: 0;
+            margin: 10px;
+            position: relative;
+            /* li가 범위를 벗어나면 숨김 */
+            overflow: hidden;
+        }
+        li img {
+            margin: 0;
+            padding: 0;
+            z-index: 5;
+            float: left;
+        }
+        li .caption {
+            /* 숨어있다가 나타나는 거 */
+            position: absolute;
+            top: -200px;
+            width: 300px;
+            height: 200px;
+            padding-top: 20px;
+            /* 마우스 올리면 나타나지는 화면 창 */
+            background-color: rgba(0, 0, 0, .6);
+            opacity: 0;
+            
+            transition: .8s .2s ease-in-out;
+            z-index: 10;
+        }
+        li:hover .caption {
+            opacity: 1;
+            transform: translateY(200px);
+        }
+        .caption h2, .caption p {
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>신상품 목록</h1>
+        <ul>
+            <li>
+                <img src="../images/prod1.jpg" alt="상품1">
+                <div class="caption">
+                    <h2>상품 1</h2>
+                    <p>상품 1 설명 텍스트</p>
+                    <p>가격 : 12,345원</p>
+                </div>
+            </li>
+            <li>
+                <img src="../images/prod2.jpg" alt="상품2">
+                <div class="caption">
+                    <h2>상품 2</h2>
+                    <p>상품 2 설명 텍스트</p>
+                    <p>가격 : 12,345원</p>
+                </div>
+            </li>
+            <li>
+                <img src="../images/prod3.jpg" alt="상품3">
+                <div class="caption">
+                    <h2>상품 3</h2>
+                    <p>상품 3 설명 텍스트</p>
+                    <p>가격 : 12,345원</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
